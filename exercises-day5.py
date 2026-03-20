@@ -10,6 +10,9 @@ Created on Fri Mar 20 10:21:11 2026
 
 import scipy as sp
 import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import poisson
+
 
 # %% Exercise 1: scipy
 
@@ -88,3 +91,64 @@ print(f"Part h: \nThe Frobenius, nuclear, and infinite norms of matrix A: \n{Ano
 
 # %% Exercise 1.statistics
 
+# a. create a discrete random variable with poisson distro
+# plot PMF
+# plot CDF
+# histogram of 1000 realizations
+
+fig, ax = plt.subplots(1, 1)
+
+mu = 2
+lb, ub = poisson.support(mu)
+
+mean, var, skew, kurt = poisson.stats(mu, moments='mvsk')
+
+x = np.arange(poisson.ppf(0.01, mu),
+              poisson.ppf(0.99, mu))
+ax.plot(x, poisson.pmf(x, mu), 'bo', ms=8, label='poisson pmf')
+ax.vlines(x, 0, poisson.pmf(x, mu), colors='b', lw=5, alpha=0.5)
+ax.set_title("Exercise 1.statistics - poisson pdf")
+
+
+# That was basically just the example code from the docs
+# And now the cdf
+
+fig, ax = plt.subplots(1, 1)
+ax.plot(x, poisson.cdf(x, mu), 'bo', ms=8, label='poisson cdf')
+ax.set_title("Exercise 1.statistics - poisson cdf")
+
+
+# generate 1000 samples (help from ChatGPT)
+samples = poisson.rvs(mu, size=1000)
+
+# plot
+fig, ax = plt.subplots(1, 1)
+
+ax.hist(samples)
+
+ax.set_title("Exercise 1.statistics - 1000 samples")
+
+# I plausibly could have figured that out, but Chat just has something much nicer
+fig, ax = plt.subplots()
+
+ax.hist(samples, bins=range(min(samples), max(samples) + 2), 
+        density=True, alpha=0.6, color='g', edgecolor='black')
+
+ax.set_title("ChatGPT's version of Histogram of 1000 Poisson Samples")
+ax.set_xlabel("Value")
+ax.set_ylabel("Frequency")
+x = np.arange(min(samples), max(samples) + 1)
+
+ax.plot(x, poisson.pmf(x, mu), 'bo', ms=8, label='PMF')
+ax.vlines(x, 0, poisson.pmf(x, mu), colors='b', lw=2, alpha=0.5)
+
+ax.legend()
+
+# %% Exercise 2. Pandas
+
+print("My project relies heavily on pandas. I'm going to use the time to get started instead of finishing these exercises.")
+
+# %% Exercise Bonus. Publishing code
+# I have some other commitments this afternoon, and I think I'll actually do this
+# as part of my project, so let's see if I can get Chat to create some boilerplate
+# real quick.
