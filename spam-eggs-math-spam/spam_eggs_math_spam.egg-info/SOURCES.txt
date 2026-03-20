@@ -1,0 +1,5 @@
+setup.py
+spam_eggs_math_spam.egg-info/PKG-INFO
+spam_eggs_math_spam.egg-info/SOURCES.txt
+spam_eggs_math_spam.egg-info/dependency_links.txt
+spam_eggs_math_spam.egg-info/top_level.txt

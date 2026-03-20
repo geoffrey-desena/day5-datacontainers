@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: spam-eggs-math-spam
+Version: 1.0
+Summary: Performs spammy simple math.
+Home-page: https://github.com/uu-python/
+Author: Viking
+Author-email: spam@spammail.net
+License: BSD
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license
+Dynamic: summary

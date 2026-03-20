@@ -152,3 +152,24 @@ print("My project relies heavily on pandas. I'm going to use the time to get sta
 # I have some other commitments this afternoon, and I think I'll actually do this
 # as part of my project, so let's see if I can get Chat to create some boilerplate
 # real quick.
+
+# Wow. Much beauty. Chat do good. 
+
+print("\nBonus:\nThere is now a directory called spam-eggs-math-spam with the modules of the simplemath package as structured by ChatGPT. In docs/_build, there is an html file with the documentation page. I wrote some simple docstrings and told ChatGPT to expand on them and give me the init code as well as the readme code. I did the directory/file creation manually, but I probably could've gotten Chat to do that do by asking it for commands.")
+
+# Finally... 
+
+# (base) geoffreydesena@Geoffreys-MacBook-Pro spam-eggs-math-spam % pip install . --user
+# Processing /Users/geoffreydesena/Documents/advc-python/day5-datacontainers/spam-eggs-math-spam
+#   Installing build dependencies ... done
+#   Getting requirements to build wheel ... done
+#   Preparing metadata (pyproject.toml) ... done
+# Building wheels for collected packages: spam-eggs-math-spam
+#   Building wheel for spam-eggs-math-spam (pyproject.toml) ... done
+#   Created wheel for spam-eggs-math-spam: filename=spam_eggs_math_spam-1.0-py3-none-any.whl size=1159 sha256=6f1c7c638c10ff7ed736882484b68ccacc3f152771534f1b50a05f913a752126
+#   Stored in directory: /Users/geoffreydesena/Library/Caches/pip/wheels/ff/92/6b/6aaf886a804644adc9c4ac210592db04ec9199ca8cd9a48eff
+# Successfully built spam-eggs-math-spam
+# Installing collected packages: spam-eggs-math-spam
+# Successfully installed spam-eggs-math-spam-1.0
+
+# and I did it!
